@@ -1,0 +1,62 @@
+<br/>
+<br/>
+<br/>
+<div class="main customer-login">
+    <h1 style="color:maroon;">Customer SignIn </h1>
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwvfLR4jbgOhhju68ZJtvdoYFrG_fa9aWOYbSxB8M-rlTDgo0ZkMEfWjJeoPmhPFfpi8w&usqp=CAU" class="img-fluid" alt=" ">
+      <br/><br/>
+    <form [formGroup] ="customerLoginForm">
+        <div class="item-icon">
+            <div class="icon">
+            </div>
+            <br/>
+            <input type="text" id="email" formControlName="email" placeholder="Email">
+        </div>
+        
+        <div *ngIf="customerLoginForm.controls['email'].invalid && (customerLoginForm.controls['email'].dirty ||customerLoginForm)"
+            class="error-message">
+            <div *ngIf="customerLoginForm.controls['email'].errors?.['required']">
+                Email shouldnt be blank
+            </div>
+            <div *ngIf="customerLoginForm.controls['email'].errors?.['pattern']">
+                Enter valid Email 
+            </div>
+        </div>
+
+
+        <br/>
+        <div class="item-icon">
+            <div class="icon">
+            </div>
+            <input type="password" id="password" formControlName="password" placeholder="Password">
+        </div>
+        <div *ngIf="customerLoginForm.controls['password'].invalid && (customerLoginForm.controls['password'])"
+            class="error-message">
+            <div *ngIf="customerLoginForm.controls['password'].errors?.['required']">
+                Password shouldnt be blank
+            </div>
+            <div *ngIf="customerLoginForm.controls['password'].errors?.['pattern']">
+                Enter valid Password 
+            </div>
+            <div *ngIf="customerLoginForm.controls['password'].errors?.['minlength']">
+                Minimum 8 character required
+            </div>
+        </div>
+        <!--End of Password validation-->
+        <br/>
+        <div>
+            <!-- <button (click)="signIn()" mat-raised-button color="primary"
+               [disabled]="!customerLoginForm.controls['password'].valid || !customerLoginForm.controls['email']"></button>
+        </div> -->
+        <button (click)="signIn()" class="btn btn-danger"
+        [disabled]="!customerLoginForm.controls['password'].valid || !customerLoginForm.controls['email']">Sign In</button>
+ </div>
+    </form>
+    <br>
+    <div class="new-user-register">
+        Dont have an acoount yet? <span class="sign-up" (click)="routeToNewUser()">Sign up now</span>
+    </div>
+    <br/>
+    <div class="sign-up" (click)="routeToForgotPassword()">Forgot Password? </div>
+   <br/>

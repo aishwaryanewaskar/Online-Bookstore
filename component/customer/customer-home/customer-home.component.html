@@ -1,0 +1,48 @@
+
+<br /><br />
+ <div class="centered">
+    Select Cateogry :   <select [(ngModel)]="category" (change)="getItemByCategory()">
+        <option [value]="100">All</option>
+        <option *ngFor="let item of getCategoryList" [value]="item?.value">{{item?.name}}</option>
+    </select>
+</div>
+<br />
+<br />
+
+<div class="centered">
+    <div *ngIf="itemList.length===0">
+        No item is available in list
+    </div>
+    <div *ngIf="itemList.length>0">
+    <table border="1" class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Item Id</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Item Description</th>
+            <th scope="col">Item Image</th>
+            <th scope="col">Item MRP</th>
+            <th scope="col">Available Quantity</th>
+            <th scope="col">Order Quantity</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tr *ngFor="let item of itemList">
+            <td>{{item?.itemId}}</td>
+            <td>{{item?.itemname}}</td>
+            <td>{{item?.description}}</td>
+            <td><img [src]="item?.image" /></td>
+            <td>{{item?.mrpPrice}}</td>
+            <td>{{item?.quantity}}</td>
+            <td><input type ="text" [id]="item?.itemId" /></td>
+            <td>
+                <button (click)="addToCart(item)" class="btn btn-danger">Add to Cart</button>
+            </td>
+    </table>
+    </div>
+    
+</div>
+
+<br />
+
+<br /> 

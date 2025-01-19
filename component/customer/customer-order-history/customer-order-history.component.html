@@ -1,0 +1,27 @@
+<p>customer-order-history works!</p>
+<div class="header">
+    <mat-icon (click)="closeDialog()">close</mat-icon>
+</div>
+
+<div class="scroll centered">
+    <div *ngIf="item.length === 0">
+        There is not any item in the Order
+    </div>
+    <div *ngIf="item.length > 0">
+        <table class="table table-striped">
+            <tr>
+                <th>Item Id</th>
+                <th>Item Name</th>
+                <th>Category</th>
+                <th>Item Image</th>
+                <th>Item MRP</th>
+            </tr>
+            <tr *ngFor="let ite of item">
+                <td>{{ite?.itemId}}</td>
+                <td>{{ite?.itemname}}</td>
+                <td>{{ite?.category}}</td>
+                <td><img [src]="ite?.image" /></td>
+                <td>{{ite?.mrpPrice}}</td>
+        </table>
+    </div>
+</div>

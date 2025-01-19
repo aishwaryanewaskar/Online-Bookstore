@@ -1,0 +1,16 @@
+table tr td {
+    height:100px;
+    width:130px;
+
+}
+table, th, td,img{
+    border:1px solid black;
+  }
+.centered {
+    display: flex;
+    justify-content: center;
+}
+img{
+    height:150px;
+    width:150px;
+}

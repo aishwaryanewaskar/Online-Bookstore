@@ -1,0 +1,22 @@
+<br/><br/><br/>
+<br/><br/><br/>
+<div class="main admin-login">
+    <h1 style="color:maroon;">Admin SignIn</h1>
+    <br/>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_QnrUmghjV_mgWtrtP6V45GIT13XdCf8dmA&usqp=CAU" class="img-fluid" alt=" ">
+    <br/>
+    <div class="item-icon">
+        <br/>
+       <div class="icon">
+        </div><input type="text" [(ngModel)]="email" placeholder="Email">
+    </div>
+    <br />
+    <div class="item-icon">
+       <div class="icon">
+        </div><input type="password" [(ngModel)]="password" placeholder="Password">
+    </div>
+    <br />
+    <div>
+        <button (click)="signIn()" class="btn btn-danger">SignIn</button>
+    </div>
+</div>

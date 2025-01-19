@@ -1,0 +1,22 @@
+
+<br/>
+<div class="main">
+    <!-- <div><img  src="../../../assets/images/fresh-logo" width="10%" height="90%"></div> -->
+    <div (click)="routerToLink('/admin/home')" [class.selected]="url === '/admin/home'">Home</div>
+    <div (click)="routerToLink('/admin/additem')" [class.selected]="url === '/admin/additem'">Add Books</div>
+    <div (click)="routerToLink('/admin/itemlist')" [class.selected]="url === '/admin/itemlist'">List Books
+    </div>
+    <div [matMenuTriggerFor]="menu" class="user-name-item">
+        <div>{{userName}}&nbsp;</div>
+        <div>
+            <mat-icon>expand_more</mat-icon>
+        </div>
+    </div>
+</div>
+
+<mat-menu #menu="matMenu">
+    <button (click)="routerToLink('/admin/logout')" mat-menu-item>
+        <mat-icon>logout</mat-icon> Logout
+    </button>
+
+</mat-menu>

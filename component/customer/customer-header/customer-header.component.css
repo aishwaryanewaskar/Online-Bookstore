@@ -1,0 +1,33 @@
+.main
+{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    background-color: rgb(235, 174, 174);
+    align-items: center;
+    color: maroon;
+    font-size: 20px;
+
+}
+.main > .selected {
+    background: white;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 10px 0 10px;
+}
+
+.user-name-item {
+    display: flex;
+    align-items: center;
+}
+
+.main div
+{
+    cursor: pointer;
+}
+
+.main img {
+    height: 111px;
+    width: 200px;
+}

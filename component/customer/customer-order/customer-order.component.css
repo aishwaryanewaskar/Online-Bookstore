@@ -1,0 +1,19 @@
+.centered {
+    display: flex;
+    justify-content: center;
+}
+/* .button-padding { 
+    margin: 0 6px 0 6px;
+}  */
+
+table tr td {
+    height:100px;
+    width:130px;
+    border:1px solid black;
+} 
+/* table, th, td{ 
+    border:1px solid black;
+} */
+
+
+ 

@@ -1,0 +1,27 @@
+.button-padding {
+    margin: 0 6px 0 6px;
+}
+table tr td img{
+    height:200px;
+    width:200px;
+
+}
+.centered {
+    display: flex;
+    justify-content: center;
+}
+.button-padding {
+    margin: 0 6px 0 6px;
+}
+.centered {
+    display: flex;
+    justify-content: center;
+}
+table tr td {
+    height:100px;
+    width:130px;
+
+}
+table, th, td,img{
+    border:1px solid black;
+  }
